@@ -36,12 +36,6 @@ class LoginViewController: BaseViewController,CPLoggingDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Hardcoded Values
-        self.clientId_Field.text = "PUB-nesonukuv.34mv" //"PUB-hcl1133.o78s"
-        self.email_Field.text =  "nesonukuv1@planet-travel.club" //"guptar@nextemail.net"
-        self.password_Field.text = "Test@123" //Test@123"
-        self.baseUrl_Field.text = "oauth-cpaas.att.com" ////"nvs-cpaas-oauth.kandy.io"
-        
         self.setNavigationBarColorForViewController(viewController: self, type: 0, titleString: "Password Grant")
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -220,9 +214,11 @@ extension LoginViewController {
 
         // Setting ICE Servers
         let iceServers: CPICEServers = CPICEServers()
+        //Primary Url
         iceServers.addICEServer("turns:turn-ucc-1.genband.com:443?transport=tcp")
-        iceServers.addICEServer("turns:turn-ucc-2.genband.com:443?transport=tcp")
         iceServers.addICEServer("stun:turn-ucc-1.genband.com:3478?transport=udp")
+        //Secondry Url
+        iceServers.addICEServer("turns:turn-ucc-2.genband.com:443?transport=tcp")
         iceServers.addICEServer("stun:turn-ucc-2.genband.com:3478?transport=udp")
         configuration.iceServers = iceServers
     }
