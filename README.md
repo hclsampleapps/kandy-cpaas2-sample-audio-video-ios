@@ -1,5 +1,5 @@
-# kandy-cpaas2-sample-ios (Swift)
-Sample app of CPaaS2 module(Call)
+# kandy-cpaas2-sample-audio-video-ios
+Sample app of CPaaS2 module Call for iOS using Swift
 
 ## Introduction
 It is a sample app where CPaaS2 APIs are used to make the following modules
@@ -33,8 +33,8 @@ For troubleshooting, please refer this link [How to install cocoapods?](https://
 To setup the project repository, run these commands
 
 ```
-git clone https://github.com/hclsampleapps/kandy-cpaas2-sample-ios.git
-cd kandy-cpaas2-sample-ios
+git clone https://github.com/hclsampleapps/kandy-cpaas2-sample-audio-video-ios.git
+cd kandy-cpaas2-sample-audio-video-ios
 ```
 
 ### Build application
