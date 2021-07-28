@@ -211,7 +211,6 @@ extension LoginViewController {
 
         let configuration = CPConfig.sharedInstance()
         configuration.restServerUrl = "oauth-cpaas.att.com"
-        configuration.useSecureConnection = true
         configuration.logManager.delegate = self
         
         configuration.iceCollectionTimeout = 12
